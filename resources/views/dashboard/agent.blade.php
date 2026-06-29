@@ -86,6 +86,7 @@
         <div class="card shadow-lg mb-4" style="border-radius: 16px; border: none; overflow: hidden;">
             <div class="card-header py-4 bg-white d-flex align-items-center justify-content-between" style="border-bottom: 1px solid #f1f3f9;">
                 <h6 class="m-0 font-weight-bold text-primary" style="font-size: 16px;"><i class="fas fa-tasks text-primary me-2"></i>Recent Assigned Tickets</h6>
+                <a href="{{ route('tickets.index') }}" class="btn btn-sm btn-outline-primary rounded-pill px-3 font-weight-bold">View All</a>
             </div>
             <div class="card-body p-0">
                 <div class="table-responsive">

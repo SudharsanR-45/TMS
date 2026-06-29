@@ -37,8 +37,9 @@ class DashboardController extends Controller
         ];
 
         $recentTickets = Ticket::where('created_by', $user->id)
+            ->whereNotIn('status', ['closed'])
             ->with(['category', 'priority'])
-            ->latest()->take(10)->get();
+            ->latest()->take(5)->get();
 
         $activeTicket = Ticket::where('created_by', $user->id)
             ->whereNotIn('status', ['closed', 'resolved'])
@@ -60,8 +61,9 @@ class DashboardController extends Controller
         ];
 
         $recentTickets = Ticket::where('assigned_to', $user->id)
+            ->whereNotIn('status', ['closed'])
             ->with(['category', 'priority', 'creator'])
-            ->latest()->take(10)->get();
+            ->latest()->take(5)->get();
 
         return view('dashboard.agent', compact('stats', 'recentTickets'));
     }

@@ -25,9 +25,9 @@
                     <div class="row g-0">
                         <div class="col-lg-6 d-none d-lg-block auth-illustration">
                             <div class="text-center px-4" style="z-index: 1;">
-                                <i class="fas fa-layer-group fa-4x mb-4 text-white opacity-75"></i>
-                                <h2 class="font-weight-bold mb-3" style="font-size: 2rem; letter-spacing: 1px;">ETMS Enterprise</h2>
-                                <p class="lead opacity-75 mb-0" style="font-size: 1.1rem; line-height: 1.6;">Streamline your workflow, resolve tickets faster, and deliver exceptional service.</p>
+                                <img src="{{ asset('images/logo.svg') }}" alt="ETMS Logo" style="width: 85%; max-width: 350px; object-fit: contain; margin-bottom: 1rem; filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.5));">
+                                <h2 class="font-weight-bold mb-3 text-white" style="font-size: 2rem; letter-spacing: 1px;">Ticket Management System</h2>
+                                <p class="lead opacity-90 mb-0 text-white font-weight-medium" style="font-size: 1.15rem; line-height: 1.6;">Streamline your workflow, resolve tickets faster, and deliver exceptional service.</p>
                             </div>
                         </div>
                         <div class="col-lg-6">

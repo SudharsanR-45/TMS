@@ -1,11 +1,8 @@
 <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}" style="text-decoration:none;">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-ticket-alt"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">ETMS <sup>Pro</sup></div>
+    <a class="sidebar-brand d-flex align-items-center justify-content-center py-4" href="{{ route('dashboard') }}" style="text-decoration:none; margin: 15px 0;">
+        <img src="{{ asset('images/logo.svg') }}" alt="ETMS Logo" style="width: 100%; object-fit: contain; transform: scale(1.2);">
     </a>
 
     <!-- Divider -->
