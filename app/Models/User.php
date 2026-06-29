@@ -126,9 +126,6 @@ class User extends Authenticatable
 
     public function getAvatarUrlAttribute(): string
     {
-        if ($this->avatar) {
-            return asset('storage/' . $this->avatar);
-        }
         // Generate a consistent avatar from initials
         $initials = collect(explode(' ', $this->name))
             ->map(fn($part) => strtoupper(substr($part, 0, 1)))

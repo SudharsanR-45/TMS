@@ -104,19 +104,14 @@
                 <h6 class="m-0 font-weight-bold" style="letter-spacing: 0.5px;">Personal Information</h6>
             </div>
             <div class="card-body">
-                <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('profile.update') }}" method="POST">
                     @csrf @method('PUT')
                     
                     <div class="row mb-3">
-                        <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="col-md-12 mb-3 mb-md-0">
                             <label class="form-label font-weight-bold">Full Name</label>
                             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name', $user->name) }}" required>
                             @error('name')<span class="invalid-feedback">{{ $message }}</span>@enderror
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label font-weight-bold">Profile Photo</label>
-                            <input type="file" name="avatar" class="form-control" accept="image/*">
-                            @error('avatar')<span class="text-danger small">{{ $message }}</span>@enderror
                         </div>
                     </div>
 

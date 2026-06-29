@@ -24,17 +24,11 @@ class ProfileController extends Controller
             'location' => 'nullable|string|max:100',
             'preferred_language' => 'nullable|string|max:50',
             'time_zone'          => 'nullable|string|max:50',
-            'avatar'   => 'nullable|image|max:2048',
         ]);
 
         $data = $request->only('name', 'phone', 'pronouns', 'location', 'preferred_language', 'time_zone');
 
-        if ($request->hasFile('avatar')) {
-            if ($user->avatar) {
-                \Illuminate\Support\Facades\Storage::disk('public')->delete($user->avatar);
-            }
-            $data['avatar'] = $request->file('avatar')->store('avatars', 'public');
-        }
+
 
         $user->update($data);
         AuditLog::record('profile_updated', $user->id);
